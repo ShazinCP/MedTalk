@@ -1,5 +1,5 @@
-import 'package:api_miniproject/view/home_screen.dart';
 import 'package:api_miniproject/view/login_screen.dart';
+import 'package:api_miniproject/widgets/bottombar.dart';
 import 'package:flutter/material.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -66,13 +66,17 @@ class RegisterScreen extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
                Navigator.of(context).pushReplacement(MaterialPageRoute(
-                    builder: (context) => const HomeScreen(),
+                    builder: (context) => const BottomBar(),
                   ));
             },
-            style: ButtonStyle(
+            style:  ButtonStyle(
               backgroundColor: MaterialStateProperty.all(Colors.blue),
-              minimumSize: MaterialStateProperty.all(
-                  const Size(150, 45)),
+              minimumSize: MaterialStateProperty.all(const Size(150, 50)),
+              shape: MaterialStateProperty.all(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
             ),
             child: const Text("Register"),
           ),
