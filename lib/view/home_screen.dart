@@ -6,10 +6,27 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[100],
+      backgroundColor: const Color.fromARGB(255, 194, 221, 240),
       appBar: AppBar(
         backgroundColor: Colors.blue[900],
         title: const Text("Home"),
+      ),
+      body: ListView.builder(
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: const EdgeInsets.only(top: 4),
+            child: Card(
+              color: Colors.blue[300],
+              child:  const ListTile(
+                title: Text(
+                  "Hello World",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ),
+          );
+        },
+        itemCount: 5,
       ),
     );
   }

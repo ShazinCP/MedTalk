@@ -30,6 +30,7 @@ class _BottomBarState extends State<BottomBar> {
         child: screens.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.blue,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home_rounded),
@@ -41,7 +42,7 @@ class _BottomBarState extends State<BottomBar> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue,
+        selectedItemColor: const Color.fromARGB(255, 199, 199, 199),
         onTap: _onItemTapped,
       ),
     );
