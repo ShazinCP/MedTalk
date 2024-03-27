@@ -1,0 +1,17 @@
+import 'package:api_miniproject/services/auth_services.dart';
+import 'package:flutter/material.dart';
+
+class AuthController extends ChangeNotifier {
+
+  TextEditingController usernameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  
+
+  AuthServices authServices = AuthServices();
+
+
+  Future<void> loginUser() async{
+    authServices.loginUserService(usernameController.text, passwordController.text);
+    notifyListeners();
+  }
+}
